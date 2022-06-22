@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Your Comment Here</h1>
+    <p id="todo"></p>
+    <textarea name="" id="new-cmnt" cols="60" rows="10"></textarea>
+    <br>
+    <button id="click-btn">post</button>
+    <script>
+        document.getElementById('click-btn').addEventListener('click',function(){
+          const newCmnt = document.getElementById('new-cmnt');
+          
+          const userCmnt = console.log(newCmnt.value);
+          const p = document.createElement('p');
+          p.innerText=newCmnt.value;
+
+          const toDo= document.getElementById('todo');
+          toDo.appendChild(p)
+
+          newCmnt.value ='';
+        });
+    </script>
+
+</body>
+</html>
